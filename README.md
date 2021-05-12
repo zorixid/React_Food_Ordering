@@ -1,4 +1,4 @@
-![Preview](src/assets/screenshot.png)
+![Preview](src/assets/20210512184259.png)
 
 React application food ordering application
 
