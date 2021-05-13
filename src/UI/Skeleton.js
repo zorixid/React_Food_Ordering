@@ -4,7 +4,9 @@ import BoxMenu from '../components/BoxMenu';
 import classes from './Skeleton.module.css';
 
 const Skeleton = (props) => {
-  return (
+  return (<div>
+
+      {props.children}
     <div className={classes.container}>
       <div className={classes.child}>
         <div className={classes.boxInfo}>
@@ -20,6 +22,7 @@ const Skeleton = (props) => {
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
