@@ -2,6 +2,7 @@ import React from 'react';
 import Order from './Order';
 import closeIcon from '../assets/151882.png';
 import classes from './CartModal.module.css';
+import Curtain from '../UI/Curtain';
 
 const CartModal = (props) => {
   const modalTriggered = () => {
@@ -22,10 +23,16 @@ const CartModal = (props) => {
   return (
     <div>
       {props.modalStatus ? (
-        <div className={classes.backdrop} onClick={modalTriggered}>
+        <div>
+          <Curtain trigger={modalTriggered} />
+
           <div className={classes.modalGrid}>
             <button className={classes.closeButton} onClick={modalTriggered}>
-            <img src={closeIcon} alt="close icon" className={classes.closeIcon}/>
+              <img
+                src={closeIcon}
+                alt="close icon"
+                className={classes.closeIcon}
+              />
             </button>
             <div className={classes.modal}>
               <div></div>
@@ -39,11 +46,10 @@ const CartModal = (props) => {
                   value={myOrder.value}
                 />
               ))}
-
             </div>
-              <div className={classes.totalDiv}>
-                <h2>{`Total: $ ${Math.round(priceToPay * 100) / 100}`}</h2>
-              </div>
+            <div className={classes.totalDiv}>
+              <h2>{`Total: $ ${Math.round(priceToPay * 100) / 100}`}</h2>
+            </div>
           </div>
         </div>
       ) : null}
