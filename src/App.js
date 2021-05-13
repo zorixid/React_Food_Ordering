@@ -122,8 +122,8 @@ console.log(myorder);
           modalTrig={modalTriggered}
           modalStatus={modalStatus}
         />
-        <Waves />
-        <Skeleton meals={DUMMY_MEALS} addFunc={onOrderListener} />
+    
+        <Skeleton meals={DUMMY_MEALS} addFunc={onOrderListener} >    <Waves /></Skeleton>
         <CartModal
           modalTrig={modalTriggered}
           modalStatus={modalStatus}
