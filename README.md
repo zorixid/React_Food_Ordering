@@ -6,7 +6,7 @@ React application food ordering application
 
 
 
-## Community codders, please commit
+## Community coders, please commit
 
 Feel free to add extra functions or improvements, This helps me to more familiarise with source control and open source project managing
 
